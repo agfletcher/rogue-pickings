@@ -15,7 +15,6 @@ body {
 .container{
 	max-width: 1200px;
 	width: 90%;
-	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -42,7 +41,8 @@ h3 {
 p {
 	font-size: 0.875em;
 	line-height: 21px;
-    padding: 0 30px;
+    padding: 0 15px;
+	text-align: left;
 }
 
 /*The widths are in a percentage!*/
@@ -66,15 +66,15 @@ header h1 span {
 	color: #77a466;
 }
 
-header nav {
-	width: 50%;
-}
 
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.875em;
 	list-style: none;
+	align-items: flex-start;
+	padding-right: 50px;
+
 }
 header nav ul li a{
 	text-decoration: none;
@@ -98,7 +98,7 @@ header nav ul li a{
 
 
 .main-title h2 {
-	text-align: lef;
+	text-align: center;
 	padding: 5px 0;
 	color: #77a466;
 }
@@ -111,21 +111,21 @@ header nav ul li a{
 .section-two,
 .section-three {
 	width: 100%;
-	border-top: 1px solid #eee;
 }
 
 .section-one h3 {
-	padding: 10px 0;
+	padding: 0;
 }
 
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+
+.section-two h3, {
+	padding: 0;
+	text-align: left;
 }
 
-.section-two h3,
 .section-three h3 {
-	padding: 10px 0px;
+	padding-left: 0px;
+	text-align: left;
 }
 
 .menu {
@@ -141,16 +141,20 @@ header nav ul li a{
 	color: #333;
 	font-size: 1em;
 	line-height: 21px;
+	text-align: left;
+	padding: 0;
+	
 }
 
 .address {
 	font-size: 1em;
 	line-height: 24px;
+	padding: 0px;
 }
 
 /*The widths are in a percentage!*/
 footer {
-	border-top: 3px solid #eee;
+
 	width: 100%;
 	text-align: center;
 	display: flex;
@@ -163,4 +167,33 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+
+@media all and (min-width: 768px) {
+	/* Tablet styles here */
+	.section-one, .section-two, .section-three {
+		align-items: center;
+		flex-basis: 33%;
+
+	}
+
+	.bottom-section {
+		justify-content: center;
+
+	}
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+
+	}
+}
+
+@media all and (min-width: 1200px) {
+	/* Desktop styles here */
+
+	header {
+
+	}
+
 }
